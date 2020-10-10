@@ -1,0 +1,199 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Paytone One', sans-serif;
+}
+
+.card::before{
+    content: "";
+    position: absolute;
+    border: 2px solid;
+    width: 100%;
+    height: 100%;
+    transform: translateY(30px) scale(0.9);
+    z-index: -1;
+    filter: blur(25px);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 600px;
+    height: 350px;
+    margin: 100px;
+    border-radius: 20px;
+
+}
+.card:nth-child(1)::before {
+    background-image: linear-gradient(135deg, rgb(223, 6, 6), rgb(55, 0, 144));
+}
+
+.card:nth-child(2)::before {
+    background-image: linear-gradient(135deg, rgb(21, 184, 0), rgb(0, 6, 85));
+}
+
+.card:nth-child(3)::before {
+    background-image: linear-gradient(135deg, rgb(223, 6, 6), rgb(0, 0, 0));
+}
+
+.card:nth-child(4)::before {
+    background-image: linear-gradient(135deg, rgb(255, 215, 0), rgb(0, 56, 9));
+}
+
+.card:nth-child(5)::before {
+    background-image: linear-gradient(135deg, rgb(0, 125, 187), rgb(122, 2, 2) 60%);
+}
+
+.card:nth-child(6)::before {
+    background-image: linear-gradient(135deg, rgb(0, 0, 0), rgb(119, 119, 119));
+}
+
+.card:nth-child(7)::before {
+    background-image: linear-gradient(135deg, rgb(255, 179, 0), rgb(170, 0, 0));
+}
+
+.card:nth-child(8)::before {
+    background-image: linear-gradient(135deg, rgb(209, 0, 0) 30%, rgb(2, 0, 117) 80%);
+}
+
+.card:nth-child(9)::before {
+    background-image: linear-gradient(135deg, rgb(209, 0, 0) 30%, rgb(11, 11, 77));
+}
+.card:nth-child(1) {
+    background-image: linear-gradient(135deg, rgb(223, 6, 6), rgb(55, 0, 144));
+}
+
+.card:nth-child(2) {
+    background-image: linear-gradient(135deg, rgb(21, 184, 0), rgb(0, 6, 85));
+}
+
+.card:nth-child(3) {
+    background-image: linear-gradient(135deg, rgb(223, 6, 6), rgb(0, 0, 0));
+}
+
+.card:nth-child(4) {
+    background-image: linear-gradient(135deg, rgb(255, 215, 0), rgb(0, 56, 9));
+}
+
+.card:nth-child(5) {
+    background-image: linear-gradient(135deg, rgb(0, 125, 187), rgb(122, 2, 2) 60%);
+}
+
+.card:nth-child(6) {
+    background-image: linear-gradient(135deg, rgb(0, 0, 0), rgb(119, 119, 119));
+}
+
+.card:nth-child(7) {
+    background-image: linear-gradient(135deg, rgb(255, 179, 0), rgb(170, 0, 0));
+}
+
+.card:nth-child(8) {
+    background-image: linear-gradient(135deg, rgb(209, 0, 0) 30%, rgb(2, 0, 117) 80%);
+}
+
+.card:nth-child(9) {
+    background-image: linear-gradient(135deg, rgb(209, 0, 0) 30%, rgb(11, 11, 77));
+}
+
+img {
+    position: absolute;
+    height: 400px;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* border: 2px solid; */
+    transition: all ease 0.3s;
+}
+
+.card:hover img {
+    left: 80%;
+    height: 500px;
+}
+
+.content {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+
+.card:hover .content {
+    left: 0%;
+    visibility: visible;
+    opacity: 1;
+}
+
+.card .content h1 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.card .content p {
+    color: white;
+    margin: 10px 0px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.card .content a {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    background-color: white;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.music_control{
+    display: inline-flex;
+    padding: 0.5rem; 
+}
+
+.music_control .fas{
+    font-size: 1.4rem;
+    vertical-align:middle;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .card {
+        margin: 70px 10px;
+        transition: all ease 0.3s;
+    }
+
+    .card:hover .content {
+        width: 100%;
+    }
+
+    .card img {
+        margin: 0px;
+    }
+
+    .card:hover {
+        height: 600px;
+    }
+
+    .card:hover img {
+        left: 50%;
+        height: 300px;
+    }
+}

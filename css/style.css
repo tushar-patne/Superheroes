@@ -175,6 +175,10 @@ img {
 }
 
 @media (max-width: 700px) {
+    html, body{
+        overflow-x: hidden;
+    }
+    
     .card {
         margin: 70px 10px;
         transition: all ease 0.3s;
